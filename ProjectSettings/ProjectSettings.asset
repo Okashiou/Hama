@@ -82,7 +82,7 @@ PlayerSettings:
   useFlipModelSwapchain: 1
   resizableWindow: 0
   useMacAppStoreValidation: 0
-  macAppStoreCategory: public.app-category.games
+  macAppStoreCategory: public.hama.games
   gpuSkinning: 0
   graphicsJobs: 0
   xboxPIXTextureCapture: 0
@@ -289,7 +289,7 @@ PlayerSettings:
   m_TemplateCustomTags:
     DESCRIPTION: Complete interactive 3D scene demo made in Unity and exported to
       WebVR with the WebVR template of the Unity WebVR assets
-    NAME: WebVR Poly Framework
+    NAME: WebVR TEST
   mobileMTRendering:
     Android: 1
     iPhone: 1
@@ -536,12 +536,12 @@ PlayerSettings:
   incrementalIl2cppBuild: {}
   allowUnsafeCode: 1
   additionalIl2CppArgs: 
-  scriptingRuntimeVersion: 1
+  scriptingRuntimeVersion: 0
   gcIncremental: 0
   gcWBarrierValidation: 0
   apiCompatibilityLevelPerPlatform:
-    Standalone: 6
-    WebGL: 6
+    Standalone: 3
+    WebGL: 3
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: WebVR-test2
