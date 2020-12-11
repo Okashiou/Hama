@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/bdama.unity
     guid: 5db71348b7f6a4b48b4f361d4806b5d2
+  - enabled: 1
+    path: Assets/WalkMovieVR.unity
+    guid: 02871a0276c8d0541987e896eaa6ace9
   m_configObjects: {}
