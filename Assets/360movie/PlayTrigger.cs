@@ -7,8 +7,11 @@ public class PlayTrigger : MonoBehaviour
 {
    
 
-    public VideoClip videoClip;
+    //public VideoClip videoClip;
     private bool playstatus = true;
+
+    [SerializeField]
+    private string relativePath;
 
     //public GameObject screen;
 
@@ -20,7 +23,21 @@ public class PlayTrigger : MonoBehaviour
         //videoPlayer.clip = videoClip;
 
         //videoPlayer.isLooping = true;   // ループの設定
+
+        VideoPlayer player = GetComponent<VideoPlayer>();
+        player.source = VideoSource.Url;
+        player.url = Application.streamingAssetsPath + "/" + relativePath;
+        player.prepareCompleted += PrepareCompleted;
+        player.Prepare();
+
     }
+
+    void PrepareCompleted(VideoPlayer vp)
+    {
+        vp.prepareCompleted -= PrepareCompleted;
+        vp.Play();
+    }
+
 
     public void VPControl()
     {
