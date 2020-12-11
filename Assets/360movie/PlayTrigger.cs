@@ -8,6 +8,8 @@ public class PlayTrigger : MonoBehaviour
    
 
     public VideoClip videoClip;
+    private bool playstatus = true;
+
     //public GameObject screen;
 
     void Start()
@@ -36,6 +38,7 @@ public class PlayTrigger : MonoBehaviour
 
         Debug.Log("walk！");
         videoPlayer.Play(); // 動画を再生する。
+        //playstatus = false;
     }
 
     void OnTriggerExit(Collider other)
@@ -44,5 +47,23 @@ public class PlayTrigger : MonoBehaviour
 
         Debug.Log("通り抜け終えた");
         videoPlayer.Pause();    // 動画を一時停止する。
+        //playstatus = true;
+    }
+
+    void Update()
+    {
+        var videoPlayer = GetComponent<VideoPlayer>();
+
+        if (Input.anyKey && playstatus)
+        {
+            Debug.Log("A key or mouse click has been detected");
+            videoPlayer.Play(); // 動画を再生する。
+        }
+        else
+        {
+
+            videoPlayer.Pause();    // 動画を一時停止する。
+            playstatus = true;
+        }
     }
 }
