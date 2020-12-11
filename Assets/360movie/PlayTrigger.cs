@@ -54,16 +54,14 @@ public class PlayTrigger : MonoBehaviour
     {
         var videoPlayer = GetComponent<VideoPlayer>();
 
-        if (Input.anyKey && playstatus)
+        if (Input.GetKey(KeyCode.Space))
         {
             Debug.Log("A key or mouse click has been detected");
             videoPlayer.Play(); // 動画を再生する。
         }
-        else
+        if (Input.GetKeyUp(KeyCode.Space))
         {
-
             videoPlayer.Pause();    // 動画を一時停止する。
-            playstatus = true;
         }
     }
 }
